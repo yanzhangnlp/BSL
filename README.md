@@ -8,6 +8,8 @@ pip3 install -e .
 
 ````
 python3 training/unsupervised_tuning.py
+python3 training/supervised_tuning.py
+python3 training/multilingual_tuning.py
 ````
 
 The multilingual NLI corpus can be downloaded from here (https://drive.google.com/file/d/19O2NArJz_RlVNNGRbBnnWxNMW-7HaFZ8/view?usp=sharing)
