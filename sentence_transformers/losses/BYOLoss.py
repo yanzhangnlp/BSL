@@ -78,7 +78,7 @@ class BYOLoss(nn.Module):
 		online_pred_one, online_pred_two = rep_one['sentence_embedding'], rep_two['sentence_embedding']
 		online_pred_one, online_pred_two = self.online_predictor_1(online_pred_one), self.online_predictor_1(online_pred_two)
 		online_pred_one, online_pred_two = self.online_predictor_2(online_pred_one), self.online_predictor_2(online_pred_two)
-		online_pred_one, online_pred_two = self.online_predictor_3(online_pred_one), self.online_predictor_2(online_pred_two)
+		online_pred_one, online_pred_two = self.online_predictor_3(online_pred_one), self.online_predictor_3(online_pred_two)
 
 		with torch.no_grad():
 
