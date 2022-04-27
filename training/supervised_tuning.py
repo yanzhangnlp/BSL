@@ -17,8 +17,8 @@ logging.basicConfig(format='%(asctime)s - %(message)s',
 #### /print debug information to stdout
 
 # Training parameters
-model_name = 'bert-base-nli-mean-tokens'
-train_batch_size = 64
+model_name = 'nli-roberta-base-v2'
+train_batch_size = 128
 num_epochs = 1
 max_seq_length = 64
 moving_average_decay = 0.9999
@@ -89,7 +89,7 @@ model.fit(train_objectives=[(train_dataloader, train_loss)],
           evaluation_steps=evaluation_steps,
           warmup_steps=warmup_steps,
           output_path=model_save_path,
-          optimizer_params={'lr': 1e-4},
+          optimizer_params={'lr': 5e-5},
           use_amp=True        #Set to True, if your GPU supports FP16 cores
           )
 
